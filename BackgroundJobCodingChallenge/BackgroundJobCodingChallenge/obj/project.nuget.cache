@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6nASreETuzI=",
+  "dgSpecHash": "IFdQSk6X1tQ=",
   "success": true,
-  "projectFilePath": "/Users/rosserton/Downloads/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge.csproj",
+  "projectFilePath": "/Users/rosserton/Workspace/ncs_bg_worker/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

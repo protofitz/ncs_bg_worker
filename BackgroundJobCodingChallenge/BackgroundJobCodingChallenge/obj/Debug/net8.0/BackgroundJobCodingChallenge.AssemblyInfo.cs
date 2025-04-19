@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackgroundJobCodingChallenge")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d033b0d25985315e53b9b477bb266027a499b80")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackgroundJobCodingChallenge")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackgroundJobCodingChallenge")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

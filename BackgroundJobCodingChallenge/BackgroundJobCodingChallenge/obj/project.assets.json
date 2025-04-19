@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rosserton/Downloads/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge.csproj",
+      "projectUniqueName": "/Users/rosserton/Workspace/ncs_bg_worker/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge.csproj",
       "projectName": "BackgroundJobCodingChallenge",
-      "projectPath": "/Users/rosserton/Downloads/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge.csproj",
+      "projectPath": "/Users/rosserton/Workspace/ncs_bg_worker/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge.csproj",
       "packagesPath": "/Users/rosserton/.nuget/packages/",
-      "outputPath": "/Users/rosserton/Downloads/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge/obj/",
+      "outputPath": "/Users/rosserton/Workspace/ncs_bg_worker/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/rosserton/.nuget/NuGet/NuGet.Config"
