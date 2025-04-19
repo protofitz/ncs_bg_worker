@@ -1,0 +1,4 @@
+/Users/rosserton/Downloads/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge/obj/Debug/net8.0/BackgroundJobCodingChallenge.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rosserton/Downloads/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge/obj/Debug/net8.0/BackgroundJobCodingChallenge.AssemblyInfoInputs.cache
+/Users/rosserton/Downloads/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge/obj/Debug/net8.0/BackgroundJobCodingChallenge.AssemblyInfo.cs
+/Users/rosserton/Downloads/BackgroundJobCodingChallenge/BackgroundJobCodingChallenge/obj/Debug/net8.0/BackgroundJobCodingChallenge.csproj.CoreCompileInputs.cache
