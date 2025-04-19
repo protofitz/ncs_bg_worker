@@ -2,7 +2,12 @@ using BackgroundJobCodingChallenge.Model;
 
 public class EmailService : ITaskService <EmailTask>
 {
-    public async Task<QueueTask<EmailTask>> ProcessTaskAsync(QueueTask<EmailTask> task, CancellationToken cancellationToken)
+    public async Task<QueueTask<EmailTask>> ProcessTaskAsync(QueueTask<EmailTask> task, CancellationToken cancellationToken, IServiceProvider serviceProvider)
+    {
+        //Not pictured here: a scoped data access object so that we can update the task status with new details as we go. 
+        // We'll pass them back in the task as well, but including the DBContext here will allow us to keep the tasks updated for long running operations.
+
+        // Process the task
     {
        
             task.Status = TaskExecutionStatus.Processing;

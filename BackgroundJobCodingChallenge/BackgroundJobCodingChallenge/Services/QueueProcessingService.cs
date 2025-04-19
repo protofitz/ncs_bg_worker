@@ -31,15 +31,17 @@ public class QueueProcessingService : BackgroundService{
             while (await timer.WaitForNextTickAsync(stoppingToken) && !stoppingToken.IsCancellationRequested)
             {
                 _logger.LogDebug("QueueProcessingService running at: {time}", DateTimeOffset.Now);
-                //trigger queue prcessing  
+                
                 
                 Task currentTask;
-                
+                //this runs until we stop it
                 while(!stoppingToken.IsCancellationRequested)
                 {
+                    //get a task
                     var task = _queueService.DequeueAsync<QueueTask<object>>(stoppingToken).Result;
                     if (task == null)
                     {
+                        //if the task is null, sleeep for a minute and then check again
                         _logger.LogInformation("No tasks in the queue. Sleeping for 5 seconds");
                         Task.Delay(5000, stoppingToken).Wait();
                         continue;
@@ -51,11 +53,12 @@ public class QueueProcessingService : BackgroundService{
                         _logger.LogInformation("Processing task {taskId} of type {taskType}", task.TaskId, task.TaskType);
                         
                         // Simulate processing
-                        
+                        //switching on task type. Handlers call out to their respective services to process the task
                         if (Enum.TryParse<TaskType>(task.TaskType, out var parsedTaskType))
                         {
                             switch (parsedTaskType)
                             {
+                                //We probably need some scoped data access and services here, I'm not sure of the syntax on that, so I'm just calling it out.
                                 case TaskType.Email:
                                     // Process Email task
                                     var emailTaskService = new EmailService();
@@ -85,7 +88,7 @@ public class QueueProcessingService : BackgroundService{
                             throw new ArgumentException($"Invalid task type: {task.TaskType}");
                         }
 
-                        // Hang an onCompleted off of the task so that we can update the status when it completes but we can continue dispatching for now.
+                        // Hang a continueWith off of the task so that we can update the status when it completes but we can continue dispatching for now.
                         _ = currentTask.ContinueWith(async t => {await handleTaskCompletion(t, task);}, TaskContinuationOptions.ExecuteSynchronously);
                         
 
@@ -104,6 +107,7 @@ public class QueueProcessingService : BackgroundService{
                         task.Exception = ex.Message;
                         task.Messages.Add($"Exception Caught! Error: {ex.Message}");
                         
+                        //always store the result in the database. 
                         await _databaseService.UpdateAsync(task);
                     }
                 }
